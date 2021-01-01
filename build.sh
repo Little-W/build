@@ -1,8 +1,4 @@
-ls
-dd if=/dev/zero of=swapfile bs=1M count=12000
-mkswap swapfile
-chmod 0600 swapfile
-swapon swapfile
+
 export PATH="/proton/bin:$PATH"
 export LD_LIBRARY_PATH="/proton/lib:$LD_LIBRARY_PATH"
 export KBUILD_BUILD_HOST="Litttle-W <1405481963@qq.com>"
