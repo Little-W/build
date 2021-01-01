@@ -1,3 +1,4 @@
+cd /sourse
 export PATH="/proton/bin:$PATH"
 export LD_LIBRARY_PATH="/proton/lib:$LD_LIBRARY_PATH"
 export KBUILD_BUILD_HOST="Litttle-W <1405481963@qq.com>"
@@ -32,9 +33,9 @@ rm -rf out
 else
 echo -e "\nCompilation failed!"
 fi
-git clone git@github.com:Little-W/build.git
-cp -v $ZIPNAME build/
-cd build
+git clone git@github.com:Little-W/build.git /build
+cp -v $ZIPNAME /build
+cd /build
 git add .
 git commit -m "$ZIPNAME"
 git push -f
