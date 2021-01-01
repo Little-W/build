@@ -38,9 +38,9 @@ rm -rf out
 else
 echo -e "\nCompilation failed!"
 fi
-git clone https://github.com/Little-W/build.git /build
-cp -v $ZIPNAME /build
-cd /build
+git clone https://github.com/Little-W/release.git /release
+cp -v $ZIPNAME /release
+cd /release
 git add .
 git commit -m "$ZIPNAME"
 git push -f
