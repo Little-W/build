@@ -21,7 +21,7 @@ fi
 
 if [ -f "out/arch/arm64/boot/Image.gz-dtb" ] && [ -f "out/arch/arm64/boot/dtbo.img" ]; then
 echo -e "\nKernel compiled succesfully! Zipping up...\n"
-echo | git clone https://github.com/Little-W/AnyKernel3.git
+git clone -p https://github.com/Little-W/AnyKernel3.git
 cp out/arch/arm64/boot/Image.gz-dtb AnyKernel3
 rm -f *zip
 cd AnyKernel3
