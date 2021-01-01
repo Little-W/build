@@ -1,6 +1,9 @@
 export PATH="/proton/bin:$PATH"
 export LD_LIBRARY_PATH="/proton/lib:$LD_LIBRARY_PATH"
 export KBUILD_BUILD_HOST="Litttle-W <1405481963@qq.com>"
+git config --global user.email "1405481963@qq.com"
+git config --global user.name "Little-W"
+git config --global user.password "Wyx200304060292"
 SECONDS=0
 ZIPNAME="Akari-ginkgo-$(date '+%Y%m%d-%H%M').zip"
 mkdir -p out
@@ -15,7 +18,7 @@ make -j$(nproc --all) O=out ARCH=arm64 CC=clang LD=ld.lld AR=llvm-ar AS=llvm-as 
 fi
 
 if [ -f "out/arch/arm64/boot/Image.gz-dtb" ]; then
-git clone -q git@github.com:Little-W/AnyKernel3.git
+git clone -q https://github.com/Little-W/AnyKernel3.git
 cp out/arch/arm64/boot/Image.gz-dtb AnyKernel3
 rm -f *zip
 cd AnyKernel3
@@ -32,12 +35,10 @@ rm -rf out
 else
 echo -e "\nCompilation failed!"
 fi
-echo yes | git clone git@github.com:Little-W/build.git /build
+git clone https://github.com/Little-W/build.git /build
 cp -v $ZIPNAME /build
 cd /build
-git config --global user.email "1405481963@qq.com"
-git config --global user.name "Little-W"
 git add .
 git commit -m "$ZIPNAME"
-echo yes | git push -f
+git push -f
 
