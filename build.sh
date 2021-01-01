@@ -1,18 +1,10 @@
-export PATH="$HOME/proton/bin:$PATH"
+export PATH="/proton/bin:$PATH"
+export LD_LIBRARY_PATH="/proton/lib:$LD_LIBRARY_PATH"
+export KBUILD_BUILD_HOST="Litttle-W <1405481963@qq.com>"
 SECONDS=0
 ZIPNAME="Akari-ginkgo-$(date '+%Y%m%d-%H%M').zip"
-
-if ! [ -d "$HOME/proton" ]; then
-echo "Proton clang not found! Cloning..."
-if ! git clone -q https://github.com/kdrag0n/proton-clang ~/proton; then
-echo "Cloning failed! Aborting..."
-exit 1
-fi
-fi
-
 mkdir -p out
 make O=out ARCH=arm64 vendor/ginkgo-perf_defconfig
-
 if [[ $1 == "-r" || $1 == "--regen" ]]; then
 cp out/.config arch/arm64/configs/vendor/ginkgo-perf_defconfig
 echo -e "\nRegened defconfig succesfully!"
@@ -40,9 +32,8 @@ rm -rf out
 else
 echo -e "\nCompilation failed!"
 fi
-
 git clone git@github.com:Little-W/build.git
-cp $ZIPNAME build/
+cp -v $ZIPNAME build/
 cd build
 git add .
 git commit -m "$ZIPNAME"
