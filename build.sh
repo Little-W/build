@@ -1,3 +1,6 @@
+dd if=/dev/zero of=/swapfile bs=1M count=12000
+mkswap /swapfile
+swapon /swapfile
 cd /sourse
 export PATH="/proton/bin:$PATH"
 export LD_LIBRARY_PATH="/proton/lib:$LD_LIBRARY_PATH"
