@@ -41,3 +41,10 @@ else
 echo -e "\nCompilation failed!"
 fi
 
+git clone git@github.com:Little-W/build.git
+cp $ZIPNAME build/
+cd build
+git add .
+git commit -m "$ZIPNAME"
+git push -f
+
