@@ -4,6 +4,8 @@ export KBUILD_BUILD_HOST="Litttle-W <1405481963@qq.com>"
 git config --global user.email "1405481963@qq.com"
 git config --global user.name "Little-W"
 git config --global user.password "Wyx200304060292"
+git config --global credential.helper store
+cp -v /re/.git-credentials ~/
 SECONDS=0
 ZIPNAME="Akari-ginkgo-$(date '+%Y%m%d-%H%M').zip"
 mkdir -p out
@@ -19,7 +21,7 @@ fi
 
 if [ -f "out/arch/arm64/boot/Image.gz-dtb" ] && [ -f "out/arch/arm64/boot/dtbo.img" ]; then
 echo -e "\nKernel compiled succesfully! Zipping up...\n"
-git clone https://github.com/Little-W/AnyKernel3.git
+echo | git clone https://github.com/Little-W/AnyKernel3.git
 cp out/arch/arm64/boot/Image.gz-dtb AnyKernel3
 rm -f *zip
 cd AnyKernel3
