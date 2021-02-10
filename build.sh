@@ -16,9 +16,7 @@ echo -e "\nRegened defconfig succesfully!"
 exit 0
 else
 echo -e "\nStarting compilation...\n"
-make 
-		{ 	  -j$(nproc --all)    \
-			  O=out \
+make 	  -j$(nproc --all)  O=out \
                           ARCH=arm64 \
                           CC="clang" \
                           AR="llvm-ar" \
@@ -33,7 +31,6 @@ make
                           CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
                           Image.gz-dtb \
                           dtbo.img
-}
 fi
 
 if [ -f "out/arch/arm64/boot/Image.gz-dtb" ] && [ -f "out/arch/arm64/boot/dtbo.img" ]; then
