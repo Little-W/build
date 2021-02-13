@@ -8,5 +8,5 @@ git clone https://github.com/Little-W/android_kernel_xiaomi_ginkgo  --branch MIU
 cd /1
 git remote add st https://github.com/kutemeikito/android_kernel_xiaomi_ginkgo
 git fetch st
-git merge st/MIUI-R
+git merge st/MIUIR
 git push
