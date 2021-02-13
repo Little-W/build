@@ -9,4 +9,5 @@ cd /1
 git remote add st https://github.com/kutemeikito/android_kernel_xiaomi_ginkgo
 git fetch st
 git merge st/MiuiR
+git commit
 git push
