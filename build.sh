@@ -1,3 +1,31 @@
+do_deps
+
+function do_deps() {
+    # We only run this when running on GitHub Actions
+    [[ -z ${GITHUB_ACTIONS:-} ]] && return 0
+    sudo apt-get install -y --no-install-recommends \
+        bc \
+        bison \
+        ca-certificates \
+        clang \
+        cmake \
+        curl \
+        file \
+        flex \
+        gcc \
+        g++ \
+        git \
+        libelf-dev \
+        libssl-dev \
+        lld \
+        make \
+        ninja-build \
+        python3 \
+        texinfo \
+        xz-utils \
+        zlib1g-dev
+}
+
 export PATH="~/tc/bin:$PATH"
 export LD_LIBRARY_PATH="~/tc/lib:$LD_LIBRARY_PATH"
 export KBUILD_BUILD_HOST="Litttle-W <1405481963@qq.com>"
