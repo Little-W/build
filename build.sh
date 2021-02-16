@@ -1,5 +1,7 @@
-do_deps
+#!/usr/bin/env bash
+set -eu
 
+do_deps
 function do_deps() {
     # We only run this when running on GitHub Actions
     [[ -z ${GITHUB_ACTIONS:-} ]] && return 0
