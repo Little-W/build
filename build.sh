@@ -21,7 +21,7 @@ function do_deps() {
         ninja-build \
         python3 \
         texinfo \
-	python2 \
+	python \
         zip \
         xz-utils \
         zlib1g-dev 
