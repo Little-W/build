@@ -6,7 +6,6 @@ function do_deps() {
         bc \
         bison \
         ca-certificates \
-        clang \
         cmake \
         curl \
         file \
