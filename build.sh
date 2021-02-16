@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -eu
 
-do_deps
 function do_deps() {
     # We only run this when running on GitHub Actions
     [[ -z ${GITHUB_ACTIONS:-} ]] && return 0
@@ -28,6 +27,7 @@ function do_deps() {
         zlib1g-dev
 }
 
+do_deps
 export PATH="~/tc/bin:$PATH"
 export LD_LIBRARY_PATH="~/tc/lib:$LD_LIBRARY_PATH"
 export KBUILD_BUILD_HOST="Litttle-W <1405481963@qq.com>"
