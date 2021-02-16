@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-set -eu
 
 function do_deps() {
     # We only run this when running on GitHub Actions
@@ -23,10 +21,11 @@ function do_deps() {
         ninja-build \
         python3 \
         texinfo \
+	python2 \
+        zip \
         xz-utils \
-        zlib1g-dev
+        zlib1g-dev 
 }
-
 do_deps
 export PATH="~/tc/bin:$PATH"
 export LD_LIBRARY_PATH="~/tc/lib:$LD_LIBRARY_PATH"
