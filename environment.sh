@@ -20,6 +20,4 @@ sudo apt-get install -y --no-install-recommends \
         zip \
         xz-utils \
         zlib1g-dev 
-git clone --depth 1 https://github.com/kdrag0n/proton-clang ~/tc
-export PATH=~/tc/bin:$PATH
-export LD_LIBRARY_PATH=~/tc/lib:$LD_LIBRARY_PATH
+git clone --depth 1 https://github.com/kutemeikito/RastaMod69-Clang ~/tc
