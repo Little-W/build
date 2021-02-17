@@ -19,6 +19,7 @@ sudo apt-get install -y --no-install-recommends \
 	python \
         zip \
         xz-utils \
+	llvm \
         zlib1g-dev 
 git clone --depth 1 https://github.com/kdrag0n/proton-clang ~/tc
 sudo dd if=/dev/zero of=/swapfile bs=1M count=10240
