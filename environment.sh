@@ -21,3 +21,6 @@ sudo apt-get install -y --no-install-recommends \
         xz-utils \
         zlib1g-dev 
 git clone --depth 1 https://github.com/kutemeikito/RastaMod69-Clang ~/tc
+sudo dd if=/dev/zero of=/swapfile bs=1M count=10240
+sudo mkswap /swapfile
+sudo swapon /swapfile
