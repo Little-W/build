@@ -21,7 +21,7 @@ sudo apt-get install -y --no-install-recommends \
         xz-utils \
 	llvm \
         zlib1g-dev 
-git clone --depth 1 https://github.com/stormbreaker-project/stormbreaker-clang ~/tc
+git clone --depth 1 https://github.com/Little-W/clang ~/tc
 sudo dd if=/dev/zero of=/swapfile bs=1M count=10240
 sudo mkswap /swapfile
 sudo swapon /swapfile
