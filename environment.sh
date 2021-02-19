@@ -22,6 +22,6 @@ sudo apt-get install -y --no-install-recommends \
 	llvm \
         zlib1g-dev 
 git clone --depth 1 https://github.com/Little-W/clang ~/tc
-sudo dd if=/dev/zero of=/swapfile bs=1M count=20480
+sudo dd if=/dev/zero of=/swapfile bs=1M count=16000
 sudo mkswap /swapfile
 sudo swapon /swapfile
