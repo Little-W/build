@@ -1,9 +1,6 @@
 export PATH=~/tc/bin:$PATH
 export LD_LIBRARY_PATH=~/tc/lib:$LD_LIBRARY_PATH
 export KBUILD_BUILD_HOST="Litttle-W <1405481963@qq.com>"
-git config --global user.email "1405481963@qq.com"
-git config --global user.name "Little-W"
-git config --global user.password "Wyx200304060292"
 git clone https://github.com/Little-W/redentials.git ~/re
 git config --global credential.helper store
 cp -v ~/re/.git-credentials ~/
