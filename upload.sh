@@ -16,8 +16,9 @@ gdrive upload --share $ZIPNAME
 else
 echo "Zip: $ZIPNAME"
 fi
-echo -e "\nCompilation failed!"
-fi
+#else
+#echo -e "\nCompilation failed!"
+#fi
 git clone https://github.com/Little-W/release.git ~/release
 cp -v $ZIPNAME ~/release
 cd ~/release
