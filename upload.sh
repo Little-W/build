@@ -1,3 +1,7 @@
+git config --global user.email "1405481963@qq.com"
+git config --global user.name "Little-W"
+git config --global user.password "Wyx200304060292"
+
 SECONDS=0
 ZIPNAME="Akari-ginkgo-$(date '+%Y%m%d-%H%M').zip"
 #if [ -f "out/arch/arm64/boot/Image.gz-dtb" ] && [ -f "out/arch/arm64/boot/dtbo.img" ]; then
