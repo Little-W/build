@@ -17,7 +17,7 @@ sudo apt-get install -y --no-install-recommends \
         ninja-build \
         python3 \
         texinfo \
-	python \
+	python2 \
         zip \
         xz-utils \
 	llvm \
