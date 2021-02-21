@@ -1,6 +1,6 @@
 SECONDS=0
 ZIPNAME="Akari-ginkgo-$(date '+%Y%m%d-%H%M').zip"
-if [ -f "out/arch/arm64/boot/Image.gz-dtb" ] && [ -f "out/arch/arm64/boot/dtbo.img" ]; then
+#if [ -f "out/arch/arm64/boot/Image.gz-dtb" ] && [ -f "out/arch/arm64/boot/dtbo.img" ]; then
 echo -e "\nKernel compiled succesfully! Zipping up...\n"
 git clone https://github.com/Little-W/AnyKernel3.git
 cp out/arch/arm64/boot/Image.gz-dtb AnyKernel3
