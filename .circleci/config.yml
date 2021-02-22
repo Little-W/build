@@ -4,5 +4,6 @@ jobs:
     docker:
       - image: 1405481963/ubuntu:latest
     steps:
-      - run: git clone --depth 1  "https://github.com/Little-W/build-script" --branch "$CIRCLE_BRANCH" .
-      - run: bash merge-st.sh
+   #   - run: git clone --depth 1  "https://github.com/Little-W/build-script" --branch "$CIRCLE_BRANCH" .
+    #  - run: bash merge-st.sh
+    - run: bash pick.sh
