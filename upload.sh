@@ -19,7 +19,7 @@ fi
 else
 echo -e "\nCompilation failed!"
 fi
-git clone --depth 1 https://github.com/Little-W/release.git ~/release
+git clone --depth 1 git@github.com:Little-W/release.git ~/release
 cp -v $ZIPNAME ~/release
 cd ~/release
 git add .
