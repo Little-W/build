@@ -22,6 +22,7 @@ sudo apt-get install -y --no-install-recommends \
         xz-utils \
 	llvm \
         zlib1g-dev 
+git clone --depth 1 git@github.com:Little-W/clang.git ~/tc
 ~/tc/bin/clang -v
 sudo dd if=/dev/zero of=/swapfile bs=1M count=40960
 sudo mkswap /swapfile
