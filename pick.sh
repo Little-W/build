@@ -2,7 +2,7 @@ git config --global user.email "1405481963@qq.com"
 git config --global user.name "Little-W"
 git config --global user.password "Wyx200304060292"
 git config --global credential.helper store
-git clone https://github.com/Little-W/redentials.git /re
+git clone git@github.com:Little-W/redentials.git /re
 cp -v /re/.git-credentials ~/
 git clone https://github.com/Little-W/clang.git   /1
 cd /1
