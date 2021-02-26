@@ -22,7 +22,7 @@ sudo apt-get install -y --no-install-recommends \
         xz-utils \
 	llvm \
         zlib1g-dev 
-git clone --depth 1 https://github.com/Little-W/Sakura-ClangBuiltLinux.git ~/tc
+git clone --depth 1 https://github.com/kdrag0n/proton-clang ~/tc
 ~/tc/bin/clang -v
 sudo dd if=/dev/zero of=/swapfile bs=1M count=40960
 sudo mkswap /swapfile
