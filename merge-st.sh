@@ -9,5 +9,5 @@ cd /1
 git remote add st https://github.com/kutemeikito/android_kernel_xiaomi_ginkgo
 git fetch st
 git merge st/MiuiR -X theirs --no-commit
-#git commit -m "merge upstream branch"
+git commit -m "merge upstream branch"
 git push
