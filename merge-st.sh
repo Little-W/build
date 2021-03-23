@@ -10,8 +10,9 @@ git remote add sl https://github.com/ghostrider-reborn/android_kernel_xiaomi_gin
 git fetch sl
 git checkout sl/11.0
 git checkout -b AOSP-R
+git push --set-upstream origin AOSP-R
 #git remote add st https://github.com/kutemeikito/android_kernel_xiaomi_ginkgo
 #git fetch st
 #git merge st/MiuiR -X theirs --no-commit
 #git commit -m "merge upstream branch"
-git push
+#git push
