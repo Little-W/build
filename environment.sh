@@ -23,8 +23,8 @@ sudo apt-get install -y --no-install-recommends \
 	llvm \
         zlib1g-dev 
 
-git clone https://github.com/bminor/glibc /glibc
-cd /glibc
+git clone https://github.com/bminor/glibc --depth 1 ~/glibc
+cd ~/glibc
 ../configure --prefix=/usr --disable-profile --enable-add-ons --with-headers=/usr/include --with-binutils=/usr/bin
 make -j8
 sudo make install
