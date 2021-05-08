@@ -12,6 +12,7 @@ sudo apt-get install -y --no-install-recommends \
         git \
         libelf-dev \
         libssl-dev \
+        linux-libc-dev:i386 \
         lld \
         make \
         ninja-build \
