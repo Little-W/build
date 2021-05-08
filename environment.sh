@@ -23,9 +23,9 @@ sudo apt-get install -y --no-install-recommends \
 	llvm \
         zlib1g-dev 
 
-git clone https://github.com/bminor/glibc --depth 1 ~/glibc
-cd ~/glibc
-../configure --prefix=/usr --disable-profile --enable-add-ons --with-headers=/usr/include --with-binutils=/usr/bin
+git clone https://github.com/bminor/glibc --depth 1 glibc
+cd glibc
+./configure --prefix=/usr --disable-profile --enable-add-ons --with-headers=/usr/include --with-binutils=/usr/bin
 make -j8
 sudo make install
 git clone --depth 1 https://github.com/Klozz/Yuki-clang ~/tc
@@ -33,3 +33,4 @@ git clone --depth 1 https://github.com/Klozz/Yuki-clang ~/tc
 sudo dd if=/dev/zero of=/swapfile bs=1M count=40960
 sudo mkswap /swapfile
 sudo swapon /swapfile
+cd ..
