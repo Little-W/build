@@ -24,7 +24,7 @@ sudo apt-get install -y --no-install-recommends \
         xz-utils \
 	llvm \
         zlib1g-dev 
-
+sudo ln -s /usr/include/asm-generic /usr/include/asm
 git clone https://github.com/bminor/glibc --depth 1 ~/glibc
 cd ~/glibc
 mkdir build
