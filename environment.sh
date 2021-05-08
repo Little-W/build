@@ -27,7 +27,7 @@ sudo apt-get install -y --no-install-recommends \
         zlib1g-dev 
 
 sudo ln -s /usr/include/asm-generic /usr/include/asm
-git clone https://github.com/bminor/glibc --depth 1 ~/glibc
+git clone https://github.com/ahjragaas/glibc --branch release/2.33/master --depth 1 ~/glibc
 cd ~/glibc
 mkdir build
 cd build
