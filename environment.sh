@@ -18,6 +18,8 @@ sudo apt-get install -y --no-install-recommends \
         make \
         ninja-build \
         python3 \
+        llvm \
+        clang \
         texinfo \
 	python2 \
         zip \
