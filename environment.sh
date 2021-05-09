@@ -32,7 +32,8 @@ wget -P ~/ https://github.com/sgerrand/docker-glibc-builder/releases/download/2.
 cd ~/
 gzip -d glibc-bin-2.33-0-x86_64.tar.gz
 tar -xvf glibc-bin-2.33-0-x86_64.tar
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib
+export LD_PRELOAD=~/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib\libc-2.33.so
+export LD_LIBRARY_PATH=~/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib
 git clone --depth 1 https://github.com/kutemeikito/RastaMod69-Clang ~/tc
 ~/tc/bin/clang -v
 sudo dd if=/dev/zero of=/swapfile bs=1M count=40960
