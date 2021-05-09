@@ -23,14 +23,14 @@ sudo apt-get install -y --no-install-recommends \
         texinfo \
 	python2 \
         zip \
-	gz \
+	gzip \
 	tar \
         xz-utils \
         zlib1g-dev 
 
 wget -P ~/ https://github.com/sgerrand/docker-glibc-builder/releases/download/2.33-0/glibc-bin-2.33-0-x86_64.tar.gz
 cd ~/
-gz -d glibc-bin-2.33-0-x86_64.tar.gz
+gzip -d glibc-bin-2.33-0-x86_64.tar.gz
 tar -xvf glibc-bin-2.33-0-x86_64.tar
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib
 git clone --depth 1 https://github.com/Klozz/Yuki-clang ~/tc
