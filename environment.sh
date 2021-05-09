@@ -28,14 +28,18 @@ sudo apt-get install -y --no-install-recommends \
         xz-utils \
         zlib1g-dev 
 
-sudo wget -P /home/ https://github.com/sgerrand/docker-glibc-builder/releases/download/2.33-0/glibc-bin-2.33-0-x86_64.tar.gz
-cd /home/
-sudo gzip -d glibc-bin-2.33-0-x86_64.tar.gz
-sudo tar -xvf glibc-bin-2.33-0-x86_64.tar
-export LD_PRELOAD=/home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib\libc-2.33.so
-export LD_LIBRARY_PATH=/home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib
+sudo ln -s /usr/include/asm-generic /usr/include/asm
+git clone https://github.com/ahjragaas/glibc --branch release/2.33/master --depth 1 ~/glibc
+cd ~/glibc
+mkdir build
+cd build
+../configure  --prefix=/opt/glibc
+make -j8
+sudo make install
+#export LD_PRELOAD=/home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib\libc-2.33.so
+#export LD_LIBRARY_PATH=/home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib
 sudo rm -rf /lib/x86_64-linux-gnu/libc.so.6
-sudo ln -s /home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib\libc-2.33.so  /lib/x86_64-linux-gnu/libc.so.6
+LD_PRELOAD=/opt/glibc/lib/libc-2.33.so  ln -s /opt/glibc/lib/libc-2.33.so /lib/x86_64-linux-gnu/libc.so.6
 git clone --depth 1 https://github.com/kutemeikito/RastaMod69-Clang ~/tc
 ~/tc/bin/clang -v
 sudo dd if=/dev/zero of=/swapfile bs=1M count=40960
