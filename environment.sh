@@ -28,10 +28,10 @@ sudo apt-get install -y --no-install-recommends \
         xz-utils \
         zlib1g-dev 
 
-wget -P /home/ https://github.com/sgerrand/docker-glibc-builder/releases/download/2.33-0/glibc-bin-2.33-0-x86_64.tar.gz
+sudo wget -P /home/ https://github.com/sgerrand/docker-glibc-builder/releases/download/2.33-0/glibc-bin-2.33-0-x86_64.tar.gz
 cd /home/
-gzip -d glibc-bin-2.33-0-x86_64.tar.gz
-tar -xvf glibc-bin-2.33-0-x86_64.tar
+sudo gzip -d glibc-bin-2.33-0-x86_64.tar.gz
+sudo tar -xvf glibc-bin-2.33-0-x86_64.tar
 sudo rm -rf /lib/x86_64-linux-gnu/libc.so.6
 sudo ln -s /home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib\libc-2.33.so  /lib/x86_64-linux-gnu/libc.so.6
 export LD_PRELOAD=/home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib\libc-2.33.so
