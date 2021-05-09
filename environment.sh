@@ -33,7 +33,7 @@ cd ~/
 gzip -d glibc-bin-2.33-0-x86_64.tar.gz
 tar -xvf glibc-bin-2.33-0-x86_64.tar
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib
-git clone --depth 1 https://github.com/Klozz/Yuki-clang ~/tc
+git clone --depth 1 https://github.com/kutemeikito/RastaMod69-Clang ~/tc
 ~/tc/bin/clang -v
 sudo dd if=/dev/zero of=/swapfile bs=1M count=40960
 sudo mkswap /swapfile
