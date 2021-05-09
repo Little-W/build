@@ -23,18 +23,16 @@ sudo apt-get install -y --no-install-recommends \
         texinfo \
 	python2 \
         zip \
+	gz \
+	tar \
         xz-utils \
         zlib1g-dev 
 
-sudo ln -s /usr/include/asm-generic /usr/include/asm
-git clone https://github.com/ahjragaas/glibc --branch release/2.33/master --depth 1 ~/glibc
-cd ~/glibc
-mkdir build
-cd build
-../configure --prefix=/usr
-make headers_install
-make -j8
-sudo make install
+wget -P ~/ https://github.com/sgerrand/docker-glibc-builder/releases/download/2.33-0/glibc-bin-2.33-0-x86_64.tar.gz
+cd ~/
+gz -d glibc-bin-2.33-0-x86_64.tar.gz
+tar -xvf glibc-bin-2.33-0-x86_64.tar
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib
 git clone --depth 1 https://github.com/Klozz/Yuki-clang ~/tc
 ~/tc/bin/clang -v
 sudo dd if=/dev/zero of=/swapfile bs=1M count=40960
