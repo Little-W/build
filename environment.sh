@@ -33,13 +33,13 @@ git clone https://github.com/ahjragaas/glibc --branch release/2.33/master --dept
 cd ~/glibc
 mkdir build
 cd build
-../configure  --prefix=/opt/glibc
+../configure  --prefix=/usr
 make -j8
 sudo make install
 #export LD_PRELOAD=/home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib\libc-2.33.so
 #export LD_LIBRARY_PATH=/home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib
-sudo rm -rf /lib/x86_64-linux-gnu/libc.so.6
-LD_PRELOAD=/opt/glibc/lib/libc-2.33.so  ln -s /opt/glibc/lib/libc-2.33.so /lib/x86_64-linux-gnu/libc.so.6
+#sudo rm -rf /lib/x86_64-linux-gnu/libc.so.6
+#LD_PRELOAD=/opt/glibc/lib/libc-2.33.so  ln -s /opt/glibc/lib/libc-2.33.so /lib/x86_64-linux-gnu/libc.so.6
 git clone --depth 1 https://github.com/kutemeikito/RastaMod69-Clang ~/tc
 ~/tc/bin/clang -v
 sudo dd if=/dev/zero of=/swapfile bs=1M count=40960
