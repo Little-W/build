@@ -28,6 +28,7 @@ sudo apt-get install -y --no-install-recommends \
         xz-utils \
         zlib1g-dev 
 
+ulimit -c 40960
 wget -P ~/ http://ftp.gnu.org/gnu/libc/glibc-2.33.tar.gz
 cd ~/
 gzip -d glibc-2.33.tar.gz
