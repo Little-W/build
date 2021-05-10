@@ -35,6 +35,7 @@ sudo tar -xvf glibc-bin-2.33-0-x86_64.tar
 #export LD_PRELOAD=/home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib\libc-2.33.so
 #export LD_LIBRARY_PATH=/home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib
 ls /lib/x86_64-linux-gnu/
+echo "-----------"
 ls /lib64
 sudo rm -rf /lib/x86_64-linux-gnu/libc.so.6
 LD_PRELOAD=/lib/x86_64-linux-gnu/libc-2.31.so sudo ln -s /home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib\libc-2.33.so  /lib/x86_64-linux-gnu/libc.so.6
