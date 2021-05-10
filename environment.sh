@@ -30,8 +30,8 @@ sudo apt-get install -y --no-install-recommends \
 
 wget -P ~/ http://ftp.gnu.org/gnu/libc/glibc-2.33.tar.gz
 cd ~/
-sudo gzip -d glibc-2.33.tar.gz
-sudo tar -xvf glibc-2.33.tar
+gzip -d glibc-2.33.tar.gz
+tar -xvf glibc-2.33.tar
 cd ~/glibc-2.33
 mkdir build
 cd build
