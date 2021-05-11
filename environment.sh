@@ -9,6 +9,7 @@ sudo apt-get install -y --no-install-recommends \
         flex \
         gcc \
         g++ \
+	rpm \
         git \
         libelf-dev \
         libssl-dev \
