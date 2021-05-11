@@ -30,10 +30,8 @@ sudo apt-get install -y --no-install-recommends \
         zlib1g-dev 
 
 #sudo wget -P /home/ https://github.com/sgerrand/docker-glibc-builder/releases/download/2.33-0/glibc-bin-2.33-0-x86_64.tar.gz
-sudo wget -P /home http://www.rpmfind.net/linux/fedora/linux/development/rawhide/Everything/x86_64/os/Packages/g/glibc-2.33.9000-2.fc35.x86_64.rpm
-cd /home/
-sudo alien glibc-2.33.9000-2.fc35.x86_64.rpm
-sudo dpkg -i glibc-2.33.9000-2.fc35.x86_64.deb
+#sudo wget -P /home http://www.rpmfind.net/linux/fedora/linux/development/rawhide/Everything/x86_64/os/Packages/g/glibc-2.33.9000-2.fc35.x86_64.rpm
+#cd /home/
 #sudo gzip -d glibc-bin-2.33-0-x86_64.tar.gz
 #sudo tar -xvf glibc-bin-2.33-0-x86_64.tar
 #ls /lib/x86_64-linux-gnu/
