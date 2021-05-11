@@ -41,7 +41,7 @@ sudo apt-get install -y --no-install-recommends \
 #export LD_LIBRARY_PATH=/home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib
 #sudo rm -rf /lib/x86_64-linux-gnu/libc.so.6
 #LD_PRELOAD=/lib/x86_64-linux-gnu/libc-2.31.so sudo ln -s /home/glibc-bin-2.33-0-x86_64/usr/glibc-compat\lib\libc-2.33.so  /lib/x86_64-linux-gnu/libc.so.6
-git clone --depth 1 https://github.com/Panchajanya1999/azure-clang ~/tc
+git clone --depth 1 https://github.com/Little-W/proton-clang ~/tc
 ~/tc/bin/clang -v
 sudo dd if=/dev/zero of=/swapfile bs=1M count=40960
 sudo mkswap /swapfile
