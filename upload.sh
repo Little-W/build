@@ -19,7 +19,7 @@ fi
 else
 echo -e "\nCompilation failed!"
 fi
-git clone --depth 1 https://github.com/Little-W/kernel-release.git ~/release
+git clone --depth 1 https://github.com/Little-W/kernel-test ~/release
 rm -f ~/release/*.zip
 cp -v $ZIPNAME ~/release
 cd ~/release
