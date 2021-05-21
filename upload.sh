@@ -1,5 +1,12 @@
 SECONDS=0
 ZIPNAME="Akari-ginkgo-$(date '+%Y%m%d-%H%M').zip"
+
+git clone git@github.com:Little-W/redentials.git ~/re
+git config --global credential.helper store
+cp -v ~/re/.git-credentials ~/
+git config --global user.email "1405481963@qq.com"
+git config --global user.name "Little-W"
+
 if [ -f "out/arch/arm64/boot/Image.gz-dtb" ] && [ -f "out/arch/arm64/boot/dtbo.img" ]; then
 echo -e "\nKernel compiled succesfully! Zipping up...\n"
 git clone https://github.com/Little-W/AnyKernel3.git
