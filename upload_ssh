@@ -1,5 +1,5 @@
 SECONDS=0
-ZIPNAME="Akari-ginkgo-$(date '+%Y%m%d-%H%M').zip"
+ZIPNAME="Akari-ginkgo-TEST-$(date '+%Y%m%d-%H%M').zip"
 
 git config --global user.email "1405481963@qq.com"
 git config --global user.name "Little-W"
