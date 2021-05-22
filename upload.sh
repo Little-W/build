@@ -1,5 +1,5 @@
 SECONDS=0
-ZIPNAME="Akari-ginkgo-$(date '+%Y%m%d-%H%M').zip"
+ZIPNAME="Akari-ginkgo-TEST-$(date '+%Y%m%d-%H%M').zip"
 
 git clone git@github.com:Little-W/redentials.git ~/re
 git config --global credential.helper store
