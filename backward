@@ -1,0 +1,11 @@
+git config --global user.email "1405481963@qq.com"
+git config --global user.name "Little-W"
+git config --global user.password "Wyx200304060292"
+git config --global credential.helper store
+git clone https://github.com/Little-W/redentials.git /re
+cp -v /re/.git-credentials ~/
+git clone https://github.com/Little-W/android_kernel_xiaomi_ginkgo  --branch MIUI-R  /1
+cd /1
+git reset --hard 01e95e6298db07d42c7d5f3c68c5d615e249499e
+git cherry-pick 1d3a4ddcd3c2a00fa263d2760dcf0b7dfedd7c5b^..ec3ba0f84a9fd74d9459adad23479fa2741b7405
+git push -f
