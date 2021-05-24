@@ -6,4 +6,4 @@ jobs:
     steps:
       - checkout
     #  - run: bash merge-st.sh
-      - run: bash backward
+    #  - run: bash backward
