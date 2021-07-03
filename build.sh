@@ -3,7 +3,7 @@ export LD_LIBRARY_PATH=~/tc/lib:$LD_LIBRARY_PATH
 export KBUILD_BUILD_HOST="Litttle-W <1405481963@qq.com>"
 export KBUILD_BUILD_USER="Akari Kernel Project"
 mkdir -p out
-make O=out ARCH=arm64 vendor/alioth_defconfig
+cp arch/arm64/configs/vendor/alioth_stock_defconfig out/.config
 echo -e "\nStarting compilation...\n"
 make 	  -j$(nproc --all)  O=out \
                           ARCH=arm64 \
