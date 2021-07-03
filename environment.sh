@@ -1,5 +1,5 @@
-sudo apt-get update
-sudo apt-get install -y --no-install-recommends \
+sudo apt update
+sudo apt install -y --no-install-recommends \
         bc \
         bison \
         ca-certificates \
