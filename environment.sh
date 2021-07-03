@@ -1,4 +1,5 @@
 sudo apt update
+sudo apt upgrade
 sudo apt install -y --no-install-recommends \
         bc \
         bison \
@@ -14,7 +15,6 @@ sudo apt install -y --no-install-recommends \
         libelf-dev \
         libssl-dev \
         linux-libc-dev \
-        linux-libc-dev:i386 \
         lld \
         make \
         ninja-build \
@@ -28,7 +28,7 @@ sudo apt install -y --no-install-recommends \
 	tar \
         xz-utils \
         zlib1g-dev 
-
+sudo apt install -y --no-install-recommends flex
 #sudo wget -P /home/ https://github.com/sgerrand/docker-glibc-builder/releases/download/2.33-0/glibc-bin-2.33-0-x86_64.tar.gz
 #sudo wget -P /home http://www.rpmfind.net/linux/fedora/linux/development/rawhide/Everything/x86_64/os/Packages/g/glibc-2.33.9000-2.fc35.x86_64.rpm
 #cd /home/
