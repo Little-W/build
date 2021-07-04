@@ -1,5 +1,5 @@
 	mkdir -p out
-  make O=out ARCH=arm64 vendor/alioth_defconfig
+  make O=out ARCH=arm64 alioth_defconfig
 	echo -e "\n" | make   -j$(nproc --all)  O=$BASE/out \
                           ARCH=arm64 \
                           CC="clang" \
