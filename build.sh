@@ -20,5 +20,5 @@ make 	  -j$(nproc --all)  O=out \
                           CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
                           Image.gz-dtb \
                           dtbo.img
-fi
+
 
