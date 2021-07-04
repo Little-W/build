@@ -1,7 +1,7 @@
 	mkdir -p out
   make O=out ARCH=arm64 alioth_defconfig
-	echo -e "\n" | make   -j$(nproc --all)  out \
-                     		     ARCH=arm64 \
+	echo -e "\n" | make   -j$(nproc --all)  O=out \
+                     		          ARCH=arm64 \
                         		  CC="clang" \
                        			  AR="llvm-ar" \
                         		  NM="llvm-nm" \
